@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Smallcaps</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", init);
+
+        function init() {
+            const text = document.getElementById("text");
+            const result = document.getElementById("result");
+
+            lowerButton.addEventListener("click", () => {
+                const textV = (text.value).toLowerCase();
+                result.innerHTML = "Here is the text as a lowercase: " + textV;
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="text" placeholder="text here">
+    <button id="lowerButton">Click to Lower</button>
+    <p id="result"></p>
+</body>
+
+</html>
