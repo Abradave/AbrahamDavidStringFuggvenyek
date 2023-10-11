@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Length Counter</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", init);
+
+        function init() {
+            const text = document.getElementById("text");
+            const result = document.getElementById("result");
+
+
+            counterButton.addEventListener("click", () => {
+                const textLength = (text.value).length;
+                result.innerHTML = "A szöveg hossza: " + textLength;
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="text" placeholder="Give me a text.">
+    <button id="counterButton">Counting Length</button>
+    <p id="result"></p>
+</body>
+
+</html>
