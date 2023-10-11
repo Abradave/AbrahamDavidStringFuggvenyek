@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Include</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", init);
+
+        function init() {
+            const text = document.getElementById("text");
+            const area = document.getElementById("area");
+            const result = document.getElementById("result");
+
+            searchButton.addEventListener("click", () => {
+                if ((area.value).length < 30) {
+                    result.innerHTML = "Give me a longer text atleast 30 char."
+                }
+                else {
+                    if ((area.value).includes(text.value)) {
+                        result.innerHTML = "It includes the word."
+                    }
+                    else {
+                        result.innerHTML = "Not in it."
+                    }
+                }
+            });
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="text" placeholder="gice me a word">
+    <br>
+    <textarea id="area" placeholder="give me some text"></textarea>
+    <br>
+    <button id="searchButton">Search</button>
+    <p id="result"></p>
+</body>
+
+</html>
