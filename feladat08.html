@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecretCode</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", init);
+
+        function init() {
+
+            const result = document.getElementById("result");
+            const textN = document.getElementById("text");
+
+            passGen.addEventListener("click", () => {
+                const text = textN.value;
+                const array = [];
+                for (let i = 0; i < text.length; i++) {
+                    let valami = text.charCodeAt(i);
+                    array.push(valami);
+                }
+                result.innerHTML = "The code is: " + array;
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="text" placeholder="giver me a text">
+    <button id="passGen">PassGen</button>
+    <p id="result"></p>
+</body>
+
+</html>
