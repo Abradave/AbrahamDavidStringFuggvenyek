@@ -5,6 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS - Stringfüggvények</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", initialize);
+
+        function initialize() {
+            const exchangeButton = document.getElementById("exchange");
+            exchangeButton.addEventListener("click", () => {
+                const text = document.getElementById("text").value;
+                const smallcaps = document.getElementById("smallcaps").checked;
+                const caps = document.getElementById("caps").checked;
+                const result = document.getElementById("result");
+
+                if (smallcaps) {
+                    result.innerHTML = small(text);
+                } else if (caps) {
+                    result.innerHTML = text.toUpperCase();
+                }
+            });
+            const small = text => text.toLowerCase();
+        }
+    </script>
 </head>
 
 <body>
@@ -20,6 +40,8 @@
 
 
     <button id="exchange">Exchange</button>
+
+    <p id="result"></p>
 </body>
 
 </html>
