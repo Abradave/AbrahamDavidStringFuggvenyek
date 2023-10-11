@@ -13,6 +13,17 @@
             const text = document.getElementById("text");
             const counter = document.getElementById("counterButton");
             const result = document.getElementById("result");
+            counter.addEventListener("click", () => {
+                const textClick = text.value;
+                let spaces = 0;
+                for (let i = 0; i < textClick.length; i++) {
+                    const char = textClick[i];
+                    if (char == " ") {
+                        spaces++;
+                    }
+                }
+                result.innerHTML = "Number of spaces are: " + spaces;
+            });
         }
     </script>
 
