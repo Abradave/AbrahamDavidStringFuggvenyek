@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Alert Name</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", init);
+
+        function init() {
+            const surname = document.getElementById("surname");
+            const firstname = document.getElementById("firstname");
+
+
+            concatButton.addEventListener("click", () => {
+                const surnameV = surname.value;
+                const firstnameV = firstname.value;
+                const name = firstnameV.concat(surnameV);
+                alert("Hello: " + name);
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="surname" placeholder="surname">
+    <input type="text" id="firstname" placeholder="firstname">
+    <button id="concatButton">Concat Button</button>
+
+</body>
+
+</html>
