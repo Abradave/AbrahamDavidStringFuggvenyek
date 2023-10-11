@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Backwards</title>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", init);
+
+        function init() {
+            const text = document.getElementById("text");
+            const result = document.getElementById("result");
+
+            backButton.addEventListener("click", () => {
+                const textV = text.value;
+                const array = [];
+
+                for (let i = 0; i < textV.length; i++) {
+                    array.push(textV[i]);
+                }
+                array.reverse();
+                const revText = array.join("");
+                result.innerHTML = "Here it is backwards: " + revText;
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="text" placeholder="text here">
+    <button id="backButton">Magic Button</button>
+    <p id="result"></p>
+</body>
+
+</html>
