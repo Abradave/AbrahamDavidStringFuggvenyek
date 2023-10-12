@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascii to char</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", init);
+
+        function init() {
+            const table = document.getElementById("table");
+
+            btn.addEventListener("click", () => {
+                const array = [];
+                const valami = [];
+                for (let i = 0; i <= 255; i++) {
+                    valami.push((String.fromCharCode(i)));
+                    array.push(i);
+                    let table = document.getElementById("table");
+                    let tr = document.querySelector("tr");
+                    let td = document.createElement("td");
+                    let value = document.createTextNode(valami[i]);
+                    tr.appendChild(td);
+                    td.textContent = valami[i];
+
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr id="table"></tr>
+    </table>
+    <button id="btn">Buttoning</button>
+</body>
+
+</html>
